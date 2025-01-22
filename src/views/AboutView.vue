@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import NavBar from '@/components/NavBar.vue';
-
+import ContactMe from "@/components/ContactMe.vue";
+import NavBar from "@/components/NavBar.vue";
 </script>
 
 <template>
+  <NavBar />
   <div class="about">
-    <NavBar />
     <h1>This is an about page</h1>
   </div>
+  <ContactMe />
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
