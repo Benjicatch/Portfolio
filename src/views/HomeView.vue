@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue';
+import NavBar from '@/components/NavBar.vue';
 
 </script>
 
 <template>
-  <main>
-  </main>
+  <NavBar />
+  <h1>This is a home page</h1>
 </template>

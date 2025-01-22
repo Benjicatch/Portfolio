@@ -1,5 +1,11 @@
+<script setup lang="ts">
+import NavBar from '@/components/NavBar.vue';
+
+</script>
+
 <template>
   <div class="about">
+    <NavBar />
     <h1>This is an about page</h1>
   </div>
 </template>
