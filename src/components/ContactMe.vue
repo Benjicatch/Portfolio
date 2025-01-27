@@ -4,7 +4,7 @@
 
 <template>
     <div class="contact-me">
-        <h2>Contact Me</h2>
+        <h2 class="title">Contact Me</h2>
         <p>If you have any questions or would like to get in touch, feel free to contact me through the following methods:</p>
         <ul>
             <li>Email: <a href="mailto:benjamin.colimard@epitech.eu">benjamin.colimard@epitech.eu</a></li>
@@ -32,13 +32,21 @@
     margin-bottom: 10px;
 }
 
+.contact-me p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
 .contact-me ul {
     list-style: none;
     padding: 0;
 }
 
 .contact-me li {
-    margin: 5px 0;
+    margin: 0.2rem 0;
+    font-size: 1rem;
+    color: var(--color-text);
 }
 
 .contact-me a {

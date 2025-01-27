@@ -13,6 +13,8 @@ import ContactMe from "@/components/ContactMe.vue";
           <h1 class="title">Welcome to My Portfolio !</h1>
           <h2 class="subtitle">Junior Developer | Backend & Fullstack | Based in Nantes</h2>
         </div>
+        <p>Currently a 5th-year student at Epitech Nantes, my diverse experiences have allowed me to gain expertise in various fields of computer science.</p>
+        <p>I am currently seeking an internship, fixed-term contract (CDD), or permanent position (CDI) with availability from Monday to Wednesday, starting September 15 until February 28.</p>
       </div>
     </section>
 
@@ -31,12 +33,16 @@ import ContactMe from "@/components/ContactMe.vue";
       </div>
     </section>
     <section class="why-work-with-me">
-      <h2 class="title">Why Work with Me?</h2>
+      <h2 class="title">Why Working with Me?</h2>
       <ul>
-        <li>Passionate about clean, efficient code.</li>
-        <li>Strong problem-solving and debugging skills.</li>
-        <li>Collaborative team player with good communication.</li>
+      <li class="why-item">Passionate about clean, efficient code.</li>
+      <li class="why-item">Strong problem-solving and debugging skills.</li>
+      <li class="why-item">Collaborative team player with good communication.</li>
       </ul>
+    </section>
+    <section class="projects">
+      <h2 class="title">Want to know more?</h2>
+       <a href="/projects" class="btn">Check out my projects</a>
     </section>
   </div>
   <ContactMe />
@@ -51,12 +57,14 @@ import ContactMe from "@/components/ContactMe.vue";
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 2rem;
 }
 
 .me {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .me:hover {
@@ -108,10 +116,10 @@ import ContactMe from "@/components/ContactMe.vue";
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  min-height: 100vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 2%;
 }
 
 .skills-grid {
@@ -125,12 +133,66 @@ import ContactMe from "@/components/ContactMe.vue";
 .skills img {
   width: 100px;
   height: 100px;
+  transition: transform 0.3s;
+}
+
+.skills img:hover {
+  transform: scale(1.1);
 }
 
 section {
   width: 100%;
   background: var(--color-background-mute);
   margin: 2rem 0;
+  padding: 2%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--color-border);
+}
+
+.why-work-with-me {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.why-item {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 3% 4%;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: var(--color-background-soft);
+  color: var(--color-heading);
+  text-decoration: none;
+  border-color: var(--color-border);
+  text-size-adjust: 100%;
+  font-size: 2rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-background);
+  border-color: var(--color-border-hover);
 }
 
 /* Keyframes for animation */
