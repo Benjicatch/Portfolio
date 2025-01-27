@@ -6,15 +6,15 @@
     <nav class="navbar">
       <ul class="nav-list">
         <a class="nav-item" href="/">Home</a>
-        <a class="nav-item" href="about">About</a>
         <a class="nav-item" href="projects">Projects</a>
         <a class="nav-item" href="academy">Academy</a>
-        <img class="img" src="../assets/me.png" alt="logo" />
+        <a class="nav-item" href="about">About</a>
+        <img class="img" src="../assets/king.png" alt="logo" />
       </ul>
     </nav>
   </div>
 </template>
-
+  
 <style scoped>
 @import "../assets/base.css";
 div {
@@ -58,6 +58,12 @@ div {
   height: 50px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+a {
+  color: var(--color-heading);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 </style>
