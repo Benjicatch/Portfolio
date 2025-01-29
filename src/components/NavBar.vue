@@ -5,16 +5,16 @@
   <div>
     <nav class="navbar">
       <ul class="nav-list">
-        <a class="nav-item" href="/">Home</a>
-        <a class="nav-item" href="projects">Projects</a>
-        <a class="nav-item" href="academy">Academy</a>
-        <a class="nav-item" href="about">About</a>
+        <a class="nav-btn" href="/">Home</a>
+        <a class="nav-btn" href="projects">Projects</a>
+        <a class="nav-btn" href="academy">Academy</a>
+        <a class="nav-btn" href="about">About</a>
       </ul>
     </nav>
     <img class="img" src="../assets/king.png" alt="logo" />
   </div>
 </template>
-  
+
 <style scoped>
 @import "../assets/base.css";
 div {
@@ -42,7 +42,7 @@ div {
   justify-content: space-around;
 }
 
-.nav-item {
+.nav-btn {
   display: block;
   color: var(--color-heading);
   text-align: center;
@@ -51,26 +51,29 @@ div {
   flex-grow: 1;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
-.nav-item::before {
+.nav-btn::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 300%;
   height: 300%;
-  background: radial-gradient(circle, var(--color-border) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-background) 0%, transparent 70%);
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.4s ease-out;
+  z-index: -1;
 }
 
-.nav-item:hover::before {
+.nav-btn:hover::before {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.nav-item:hover {
+.nav-btn:hover {
   color: var(--color-heading);
+  z-index: 2;
 }
 
 .img {
