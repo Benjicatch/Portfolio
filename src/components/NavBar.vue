@@ -9,24 +9,27 @@
         <a class="nav-item" href="projects">Projects</a>
         <a class="nav-item" href="academy">Academy</a>
         <a class="nav-item" href="about">About</a>
-        <img class="img" src="../assets/king.png" alt="logo" />
       </ul>
     </nav>
+    <img class="img" src="../assets/king.png" alt="logo" />
   </div>
 </template>
   
 <style scoped>
 @import "../assets/base.css";
 div {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background-mute);
 }
 
 .navbar {
-  background-color: var(--color-background-mute);
   overflow: hidden;
   flex: 1;
 }
@@ -43,13 +46,30 @@ div {
   display: block;
   color: var(--color-heading);
   text-align: center;
-  padding: 14px 16px;
+  padding: 1.6rem 1rem;
   text-decoration: none;
   flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, var(--color-border) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease-out;
+}
+
+.nav-item:hover::before {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .nav-item:hover {
-  background-color: var(--color-border-hover);
   color: var(--color-heading);
 }
 
