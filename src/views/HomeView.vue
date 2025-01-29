@@ -13,15 +13,15 @@ import vuejsImage from "../assets/skills/Vuejs.png";
 
 // Skills array
 const skills = [
-  { name: "C", image: cImage },
-  { name: "C++", image: cppImage },
-  { name: "Docker", image: dockerImage },
-  { name: "Lisp", image: lispImage },
-  { name: "NestJs", image: nestjsImage },
-  { name: "React", image: reactImage },
-  { name: "Python", image: pythonImage },
-  { name: "Typescript", image: typescriptImage },
-  { name: "Vuejs", image: vuejsImage },
+  { name: "C", image: cImage, website: "https://en.wikipedia.org/wiki/C_(programming_language)" },
+  { name: "C++", image: cppImage, website: "https://en.wikipedia.org/wiki/C%2B%2B" },
+  { name: "Typescript", image: typescriptImage, website: "https://www.typescriptlang.org/" },
+  { name: "Docker", image: dockerImage, website: "https://www.docker.com/" },
+  { name: "NestJs", image: nestjsImage, website: "https://nestjs.com/" },
+  { name: "Python", image: pythonImage, website: "https://www.python.org/" },
+  { name: "React", image: reactImage, website: "https://reactjs.org/" },
+  { name: "Vuejs", image: vuejsImage, website: "https://vuejs.org/" },
+  { name: "Lisp", image: lispImage, website: "https://lisp-lang.org/" },
 ];
 </script>
 
@@ -55,7 +55,9 @@ const skills = [
         <h2 class="title">Skills & Tools</h2>
         <div class="skills-grid">
           <div v-for="skill in skills" :key="skill.name" class="skill-item">
-            <img :src="skill.image" :alt="skill.name" />
+            <a :href="skill.website" target="_blank">
+              <img :src="skill.image" :alt="skill.name" />
+            </a>
           </div>
         </div>
       </section>
