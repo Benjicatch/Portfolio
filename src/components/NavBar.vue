@@ -6,7 +6,7 @@
       <ul class="nav-list">
         <a class="nav-btn" href="/">Home</a>
         <a class="nav-btn" href="projects">Projects</a>
-        <a class="nav-btn" href="academy">Academy</a>
+        <a class="nav-btn" href="studies">Studies</a>
         <a class="nav-btn" href="about">About</a>
       </ul>
     </nav>
@@ -26,6 +26,7 @@ div {
   justify-content: center;
   align-items: center;
   background-color: var(--color-background-mute);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .navbar {

@@ -23,8 +23,8 @@ const router = createRouter({
       component: ProjectsView,
     },
     {
-      path: "/academy",
-      name: "academy",
+      path: "/studies",
+      name: "studies",
       component: AcademyView,
     },
   ],
