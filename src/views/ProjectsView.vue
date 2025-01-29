@@ -50,10 +50,12 @@ const projects = [
       </div>
     </section>
     <section v-for="project in projects" :key="project.title" class="projects">
-      <h2 class="title">{{ project.title }}</h2>
       <img :src="project.image" :alt="project.title" />
-      <p>{{ project.description }}</p>
-      <a :href="project.link" class="btn">Learn more</a>
+      <div class="project-details" >
+        <h2 class="title">{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <a :href="project.link" class="btn">Learn more</a>
+      </div>
     </section>
   </div>
   <ContactMe />
@@ -73,19 +75,47 @@ const projects = [
 
 .projects {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   padding: 2rem;
+  flex-direction: row;
 }
 
 .projects p {
-  white-space: pre-line; /* Ensures new lines are preserved while allowing wrapping */
+  margin-bottom: 1rem;
+  max-width: 70rem; /* Restrict width to force wrapping */
   word-break: break-word; /* Breaks words when necessary */
+  white-space: pre-line; /* Ensures new lines are preserved while allowing wrapping */
 }
 
 .projects img {
-  max-width: 40%;
-  max-height: 40%;
+  max-width: 40rem;
+  max-height: 20rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-details h2 {
+  margin-bottom: 1rem;
+}
+
+.project-details a {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .projects img {
+    max-width: 100%;
+    max-height: 15rem;
+  }
+  
+}
+
 </style>

@@ -180,19 +180,18 @@ const skills = [
 }
 
 .why-work-with-me {
-  display: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
 }
 
 .why-item-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   padding: 0;
-  margin-top: 6.5rem;
-  align-items: center; /* Center the text horizontally */
+  align-items: center;
   justify-content: center;
 }
 
@@ -229,11 +228,11 @@ const skills = [
 
 @media screen and (max-width: 480px) {
   .title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .me_skills {
@@ -257,6 +256,14 @@ const skills = [
 
   section {
     margin: 0%;
+  }
+  
+  .why-item-list li {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
 </style>

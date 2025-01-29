@@ -32,7 +32,7 @@ section {
 }
 
 .btn:hover {
-  background-color: var(--color-background);
+  background-color: var(--color-border-hover);
   border-color: var(--color-border-hover);
 }
 
