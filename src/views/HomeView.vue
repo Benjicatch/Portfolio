@@ -10,7 +10,7 @@ import ContactMe from "@/components/ContactMe.vue";
       <div class="welcome-body">
         <div class="container">
           <img class="me" src="../assets/me.jpg" alt="me"/>
-          <h1 class="title">Welcome to My Portfolio !</h1>
+          <h1 class="title">Welcome to my Portfolio !</h1>
           <h2 class="subtitle">Junior Developer | Backend & Fullstack | Based in Nantes</h2>
         </div>
         <p>Currently a 5th-year student at Epitech Nantes, my diverse experiences have allowed me to gain expertise in various fields of computer science.</p>
@@ -38,7 +38,7 @@ import ContactMe from "@/components/ContactMe.vue";
       </div>
     </section>
     <section class="why-work-with-me">
-      <h2 class="title">Why Working with Me?</h2>
+      <h2 class="title">Why working with me ?</h2>
       <div class="why-item-list">
         <ul>
           <li>Passionate about clean, efficient code.</li>
@@ -49,7 +49,7 @@ import ContactMe from "@/components/ContactMe.vue";
     </section>
   </section>
     <section class="projects">
-      <h2 class="title">Want to know more?</h2>
+      <h2 class="title">Want to know more ?</h2>
        <a href="/projects" class="btn">Check out my projects</a>
     </section>
   </div>
@@ -154,20 +154,29 @@ import ContactMe from "@/components/ContactMe.vue";
 }
 
 .why-work-with-me {
-  display: flex;
+  display: flex-start;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.why-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  margin-top: 6.5rem;
+  align-items: center; /* Center the text horizontally */
+  justify-content: center;
 }
 
 .why-item-list li {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin: 0.5rem 0;
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-text);
   display: list-item;
-  align-items: center;
-  justify-content: center;
 }
 
 .projects {
