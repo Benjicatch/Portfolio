@@ -55,7 +55,7 @@ const skills = [
         <h2 class="title">Skills & Tools</h2>
         <div class="skills-grid">
           <div v-for="skill in skills" :key="skill.name" class="skill-item">
-            <a :href="skill.website" target="_blank">
+            <a :href="skill.website" target="_blank" rel="noopener noreferrer">
               <img :src="skill.image" :alt="skill.name" />
             </a>
           </div>
