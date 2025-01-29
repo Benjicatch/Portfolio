@@ -5,20 +5,12 @@
   font-weight: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
 section {
+  width: 100%;
+  background: var(--color-background-mute);
+  margin: 2rem 0;
+  padding: 2%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--color-border);
   gap: var(--section-gap);
 }
