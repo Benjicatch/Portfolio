@@ -1,6 +1,28 @@
 <script setup lang="ts">
 import NavBar from "@/components/NavBar.vue";
 import ContactMe from "@/components/ContactMe.vue";
+import cImage from "../assets/skills/C.png";
+import cppImage from "../assets/skills/C++.png";
+import dockerImage from "../assets/skills/Docker.png";
+import lispImage from "../assets/skills/Lisp.png";
+import nestjsImage from "../assets/skills/NestJs.png";
+import reactImage from "../assets/skills/React.png";
+import pythonImage from "../assets/skills/Python.png";
+import typescriptImage from "../assets/skills/Typescript.png";
+import vuejsImage from "../assets/skills/Vuejs.png";
+
+// Skills array
+const skills = [
+  { name: "C", image: cImage },
+  { name: "C++", image: cppImage },
+  { name: "Docker", image: dockerImage },
+  { name: "Lisp", image: lispImage },
+  { name: "NestJs", image: nestjsImage },
+  { name: "React", image: reactImage },
+  { name: "Python", image: pythonImage },
+  { name: "Typescript", image: typescriptImage },
+  { name: "Vuejs", image: vuejsImage },
+];
 </script>
 
 <template>
@@ -9,55 +31,54 @@ import ContactMe from "@/components/ContactMe.vue";
     <section class="welcome">
       <div class="welcome-body">
         <div class="container">
-          <img class="me" src="../assets/me.jpg" alt="me"/>
+          <img class="me" src="../assets/me.jpg" alt="me" />
           <h1 class="title">Welcome to my Portfolio !</h1>
-          <h2 class="subtitle">Junior Developer | Backend & Fullstack | Based in Nantes</h2>
+          <h2 class="subtitle">
+            Junior Developer | Backend & Fullstack | Based in Nantes
+          </h2>
         </div>
-        <p>Currently a 5th-year student at Epitech Nantes, my diverse experiences have allowed me to gain expertise in various fields of computer science.</p>
-        <p>I am currently seeking an internship, fixed-term contract (CDD), or permanent position (CDI) with availability from Monday to Wednesday, starting September 15 until February 28.</p>
+        <p>
+          Currently a 5th-year student at Epitech Nantes, my diverse experiences
+          have allowed me to gain expertise in various fields of computer
+          science.
+        </p>
+        <p>
+          I am currently seeking an internship, fixed-term contract (CDD), or
+          permanent position (CDI) with availability from Monday to Wednesday,
+          starting September 15 until February 28.
+        </p>
       </div>
     </section>
 
     <section class="me_skills">
-    <section class="skills">
-      <h2 class="title">Skills & Tools</h2>
-      <div class="skills-grid">
-        <img src="../assets/skills/C.png" alt="C" />
-        <img src="../assets/skills/C++.png" alt="C++" />
-        <img src="../assets/skills/Docker.png" alt="Docker" />
-      </div>
-      <div class="skills-grid">
-        <img src="../assets/skills/Lisp.png" alt="Lisp" />
-        <img src="../assets/skills/NestJs.png" alt="NestJs" />
-        <img src="../assets/skills/React.png" alt="React" />
-      </div>
-      <div class="skills-grid">
-        <img src="../assets/skills/Python.png" alt="Python" />
-        <img src="../assets/skills/Typescript.png" alt="Typescript" />
-        <img src="../assets/skills/Vuejs.png" alt="Vuejs" />
-      </div>
+      <section class="skills">
+        <h2 class="title">Skills & Tools</h2>
+        <div class="skills-grid">
+          <div v-for="skill in skills" :key="skill.name" class="skill-item">
+            <img :src="skill.image" :alt="skill.name" />
+          </div>
+        </div>
+      </section>
+      <section class="why-work-with-me">
+        <h2 class="title">Why working with me ?</h2>
+        <div class="why-item-list">
+          <ul>
+            <li>Passionate about clean, efficient code.</li>
+            <li>Strong problem-solving and debugging skills.</li>
+            <li>Collaborative team player with good communication.</li>
+          </ul>
+        </div>
+      </section>
     </section>
-    <section class="why-work-with-me">
-      <h2 class="title">Why working with me ?</h2>
-      <div class="why-item-list">
-        <ul>
-          <li>Passionate about clean, efficient code.</li>
-          <li>Strong problem-solving and debugging skills.</li>
-          <li>Collaborative team player with good communication.</li>
-        </ul>
-      </div>
-    </section>
-  </section>
     <section class="projects">
       <h2 class="title">Want to know more ?</h2>
-       <a href="/projects" class="btn">Check out my projects</a>
+      <a href="/projects" class="btn">Check out my projects</a>
     </section>
   </div>
   <ContactMe />
 </template>
 
 <style>
-
 .home {
   display: flex;
   flex-wrap: wrap;
@@ -81,7 +102,8 @@ import ContactMe from "@/components/ContactMe.vue";
   transform: perspective(1000px) rotateY(360deg);
 }
 
-.welcome, .projects {
+.welcome,
+.projects {
   text-align: center;
   padding: 2rem;
 }
@@ -137,10 +159,14 @@ import ContactMe from "@/components/ContactMe.vue";
 
 .skills-grid {
   display: flex;
-  flex-direction: row;
-  gap: 10rem;
+  flex-wrap: wrap;
+  gap: 2rem; /* Adjust gap */
   justify-content: center;
   align-items: center;
+}
+
+.skill-item {
+  text-align: center;
 }
 
 .skills img {
@@ -187,25 +213,6 @@ import ContactMe from "@/components/ContactMe.vue";
   justify-content: center;
   flex-direction: column;
   padding: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 3% 4%;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: var(--color-background-soft);
-  color: var(--color-heading);
-  text-decoration: none;
-  border-color: var(--color-border);
-  text-size-adjust: 100%;
-  font-size: 2rem;
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--color-background);
-  border-color: var(--color-border-hover);
 }
 
 /* Keyframes for animation */

@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
@@ -11,7 +10,7 @@
         <a class="nav-btn" href="about">About</a>
       </ul>
     </nav>
-    <img class="img" src="../assets/king.png" alt="logo" />
+    <img class="img" src="../assets/me.jpg" alt="logo" />
   </div>
 </template>
 
@@ -61,7 +60,11 @@ div {
   left: 50%;
   width: 300%;
   height: 300%;
-  background: radial-gradient(circle, var(--color-background) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    var(--color-background) 0%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.4s ease-out;
   z-index: -1;
@@ -88,5 +91,4 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
-
 </style>
