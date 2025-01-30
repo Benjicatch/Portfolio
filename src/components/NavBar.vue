@@ -4,7 +4,7 @@
   <div>
     <nav class="navbar">
       <ul class="nav-list">
-        <a class="nav-btn" href="/">Home</a>
+        <a class="nav-btn" href="#">Home</a>
         <a class="nav-btn" href="#projects">Projects</a>
         <a class="nav-btn" href="#studies">Studies</a>
         <a class="nav-btn" href="#about">About Me</a>
