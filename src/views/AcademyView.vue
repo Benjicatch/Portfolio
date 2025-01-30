@@ -4,6 +4,13 @@ import NavBar from "@/components/NavBar.vue";
 
 const timelineItems = [
   {
+    title: "Chung Cheng University, Taiwan",
+    description: "Studied at Chung Cheng University as an exchange student for 2 semester.",
+    color: "blue",
+    icon: "mdi-briefcase",
+    date: "2024-2025"
+  },
+  {
     title: "Internship at the Institute of Technology, Bordeaux",
     description: "Worked as a Lisp developer on a project automating the creation of virtual machines for the institute.",
     color: "blue",

@@ -9,12 +9,12 @@
     </p>
     <ul>
       <li>
-        Email:
+        Email📧:
         <a href="mailto:benjamin.colimard@epitech.eu"
           >benjamin.colimard@epitech.eu</a
         >
       </li>
-      <li>Phone: <a href="tel:+33618203071">+33 6 18 20 30 71</a></li>
+      <li>Phone☎️: <a href="tel:+33618203071">+33 6 18 20 30 71</a></li>
       <li>
         LinkedIn:
         <a href="https://www.linkedin.com/in/benjamin-colimard" target="_blank"
