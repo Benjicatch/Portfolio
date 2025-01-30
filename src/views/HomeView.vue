@@ -74,7 +74,7 @@ const skills = [
     </section>
     <section class="projects">
       <h2 class="title">Want to know more ?</h2>
-      <a href="/projects" class="btn">Check out my projects</a>
+      <a href="#projects" class="btn">Check out my projects</a>
     </section>
   </div>
   <ContactMe />
