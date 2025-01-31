@@ -7,10 +7,10 @@
         <a class="nav-btn" href="#">Home</a>
         <a class="nav-btn" href="#projects">Projects</a>
         <a class="nav-btn" href="#studies">Studies</a>
-        <a class="nav-btn" href="#about">About Me</a>
+        <a class="nav-btn" href="#about-me">About Me</a>
       </ul>
     </nav>
-    <img class="img" src="../assets/me.jpg" alt="logo" />
+    <img class="img" src="../assets/me/profesionnal.jpg" alt="logo" />
   </div>
 </template>
 

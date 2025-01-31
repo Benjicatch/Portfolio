@@ -31,7 +31,7 @@ const skills = [
     <section class="welcome">
       <div class="welcome-body">
         <div class="container">
-          <img class="me" src="../assets/me.jpg" alt="me" />
+          <img class="me" src="../assets/me/profesionnal.jpg" alt="me" />
           <h1 class="title">Welcome to my Portfolio !</h1>
           <h2 class="subtitle">
             Junior Developer | Backend & Fullstack | Based in Nantes
