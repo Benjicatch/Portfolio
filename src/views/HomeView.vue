@@ -43,7 +43,7 @@ const skills = [
     <section>
       <h2 class="title">Who am I ?</h2>
         <p class="align-text">
-          My name is <strong>Benjamin Colimard</strong>, I am a French citizen born in Nantes, and I am 21 years old.
+          My name is <strong>Benjamin Colimard</strong>, I am a French citizen born in Bordeaux, and I am 21 years old.
         </p>
         <p class="align-text">
           Currently a 4th-year student at <strong>Epitech Nantes</strong>, my diverse experiences
