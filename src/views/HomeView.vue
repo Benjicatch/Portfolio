@@ -37,17 +37,24 @@ const skills = [
             Junior Developer | Backend & Fullstack | Based in Nantes
           </h2>
         </div>
-        <p>
-          Currently a 5th-year student at Epitech Nantes, my diverse experiences
+      </div>
+    </section>
+
+    <section>
+      <h2 class="title">Who am I ?</h2>
+        <p class="align-text">
+          My name is <strong>Benjamin Colimard</strong>, I am a French citizen born in Nantes, and I am 21 years old.
+        </p>
+        <p class="align-text">
+          Currently a 4th-year student at <strong>Epitech Nantes</strong>, my diverse experiences
           have allowed me to gain expertise in various fields of computer
           science.
         </p>
-        <p>
-          I am currently seeking an internship, fixed-term contract (CDD), or
-          permanent position (CDI) with availability from Monday to Wednesday,
+        <p class="align-text">
+          I am currently seeking an <strong>internship, fixed-term contract (CDD), or
+          permanent position (CDI)</strong> with availability from Monday to Wednesday,
           starting September 15 until February 28.
         </p>
-      </div>
     </section>
 
     <section class="me_skills">
@@ -90,6 +97,14 @@ const skills = [
   justify-content: center;
   flex-direction: column;
   padding: 2rem;
+}
+
+.align-text {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  word-break: break-word; /* Breaks words when necessary */
+  white-space: pre-line; /* Ensures new lines are preserved while allowing wrapping */
 }
 
 .me {

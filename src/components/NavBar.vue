@@ -46,7 +46,7 @@ div {
   display: block;
   color: var(--color-heading);
   text-align: center;
-  padding: 1.6rem 1rem;
+  padding: 1.4rem 0rem;
   text-decoration: none;
   flex-grow: 1;
   position: relative;
