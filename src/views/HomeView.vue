@@ -34,7 +34,7 @@ const skills = [
           <img class="me" src="../assets/me/profesionnal.jpg" alt="me" />
           <h1 class="title">Welcome to my Portfolio !</h1>
           <h2 class="subtitle">
-            Junior Developer | Backend & Fullstack | Based in Nantes
+            Experienced Developer | Backend & Fullstack | Based in Nantes
           </h2>
         </div>
       </div>
