@@ -43,7 +43,7 @@ const skills = [
     <section>
       <h2 class="title">Who am I ?</h2>
         <p class="align-text">
-          My name is <strong>Benjamin Colimard</strong>, I am a French citizen born in Bordeaux, and I am 21 years old.
+          My name is <strong>Benjamin Colimard</strong>, I am a French person born in Bordeaux and I am 21 years old.
         </p>
         <p class="align-text">
           Currently a 4th-year student at <strong>Epitech Nantes</strong>, my diverse experiences
@@ -53,7 +53,7 @@ const skills = [
         <p class="align-text">
           I am currently seeking an <strong>internship, fixed-term contract (CDD), or
           permanent position (CDI)</strong> with availability from Monday to Wednesday,
-          starting September 15 until February 28.
+          starting 15 September 2025 until 28 February 2026.
         </p>
     </section>
 
