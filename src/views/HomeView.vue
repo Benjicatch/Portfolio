@@ -32,34 +32,22 @@ const skills = [
       <div class="welcome-body">
         <div class="container">
           <img class="me" src="../assets/me/profesionnal.jpg" alt="me" />
-          <h1 class="title">Welcome to my Portfolio !</h1>
-          <h2 class="subtitle">
-            Experienced Developer | Backend & Fullstack | Based in Nantes
-          </h2>
+          <h1 class="title">{{ $t("home.title") }}</h1>
+          <h2 class="subtitle" v-html="$t('home.subtitle')"></h2>
         </div>
       </div>
     </section>
 
     <section>
-      <h2 class="title">Who am I ?</h2>
-        <p class="align-text">
-          My name is <strong>Benjamin Colimard</strong>, I am a French person born in Bordeaux and I am 21 years old.
-        </p>
-        <p class="align-text">
-          Currently a 4th-year student at <strong>Epitech Nantes</strong>, my diverse experiences
-          have allowed me to gain expertise in various fields of computer
-          science.
-        </p>
-        <p class="align-text">
-          I am currently seeking an <strong>internship, fixed-term contract (CDD), or
-          permanent position (CDI)</strong> with availability from Monday to Wednesday,
-          starting 15 September 2025 until 28 February 2026.
-        </p>
+      <h2 class="title">{{ $t("home.whoAmI.title") }}</h2>
+        <p class="align-text" v-html="$t('home.whoAmI.content[0]')"></p>
+        <p class="align-text" v-html="$t('home.whoAmI.content[1]')"></p>
+        <p class="align-text" v-html="$t('home.whoAmI.content[2]')"></p>
     </section>
 
     <section class="me_skills">
       <section class="skills">
-        <h2 class="title">Skills & Tools</h2>
+        <h2 class="title">{{ $t("home.skills") }}</h2>
         <div class="skills-grid">
           <div v-for="skill in skills" :key="skill.name" class="skill-item">
             <a :href="skill.website" target="_blank" rel="noopener noreferrer">
@@ -69,18 +57,18 @@ const skills = [
         </div>
       </section>
       <section class="why-work-with-me">
-        <h2 class="title">Why working with me ?</h2>
+        <h2 class="title">{{ $t("home.whyWorkWithMe") }}</h2>
         <div class="why-item-list">
           <ul>
-            <li>Passionate about clean, efficient code.</li>
-            <li>Strong problem-solving and debugging skills.</li>
-            <li>Collaborative team player with good communication.</li>
+            <li>{{ $t("home.whyItem1") }}</li>
+            <li>{{ $t("home.whyItem2") }}</li>
+            <li>{{ $t("home.whyItem3") }}</li>
           </ul>
         </div>
       </section>
     </section>
     <section class="projects">
-      <h2 class="title">Want to know more ?</h2>
+      <h2 class="title">{{ $t("home.projects") }}</h2>
       <a href="#projects" class="btn">Check out my projects</a>
     </section>
   </div>

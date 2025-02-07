@@ -1,53 +1,57 @@
 <script setup lang="ts">
 import ContactMe from "@/components/ContactMe.vue";
 import NavBar from "@/components/NavBar.vue";
+import { useI18n } from "vue-i18n";
+
+// Accessing translations via useI18n hook
+const { t } = useI18n();
 
 const timelineItems = [
   {
-    title: "Chung Cheng University, Taiwan",
-    description: "Studied at Chung Cheng University as an exchange student for 2 semester.",
+    title: t("studies.taiwan.title"),
+    description: t("studies.taiwan.description"),
     color: "blue",
     icon: "mdi-briefcase",
     date: "2024-2025"
   },
   {
-    title: "Internship at the Institute of Technology, Bordeaux",
-    description: "Worked as a Lisp developer on a project automating the creation of virtual machines for the institute.",
+    title: t("studies.internship_bordeaux.title"),
+    description: t("studies.internship_bordeaux.description"),
     color: "blue",
     icon: "mdi-briefcase",
     date: "2024"
   },
   {
-    title: "Internship at Chouic, Nantes",
-    description: "Developed and maintained mobile applications using React Native for the company’s products.",
+    title: t("studies.internship_chouic.title"),
+    description: t("studies.internship_chouic.description"),
     color: "green",
     icon: "mdi-web",
     date: "2022"
   },
   {
-    title: "Epitech, Nantes",
-    description: "Started my studies at Epitech Nantes, specializing in software development.",
+    title: t("studies.epitech.title"),
+    description: t("studies.epitech.description"),
     color: "purple",
     icon: "mdi-school",
     date: "2021"
   },
   {
-    title: "High School Saint Dominique, Nantes",
-    description: "Graduated with honors.\nSpecialized in programming and mathematics as final subjects.",
+    title: t("studies.highschool_saint_dominique.title"),
+    description: t("studies.highschool_saint_dominique.description"),
     color: "purple",
     icon: "mdi-school",
     date: "2020-2021"
   },
   {
-    title: "High School Alfred Kastler, Talence",
-    description: "Pursued baseball sports studies while beginning programming.\nFocused on programming, physics-chemistry, and mathematics.",
+    title: t("studies.highschool_alfred_kastler.title"),
+    description: t("studies.highschool_alfred_kastler.description"),
     color: "purple",
     icon: "mdi-school",
     date: "2018-2020"
   },
   {
-    title: "College Victor Louis, Talence",
-    description: "Participated in baseball sports studies during my college years.",
+    title: t("studies.college_victor_louis.title"),
+    description: t("studies.college_victor_louis.description"),
     color: "red",
     icon: "mdi-laptop",
     date: "2017-2018"

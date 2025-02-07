@@ -13,8 +13,8 @@ const items = [ "ENG", "FRA" ];
     <nav class="navbar">
       <ul class="nav-list">
         <a class="nav-btn" href="#">{{ $t("nav.home") }}</a>
-        <a class="nav-btn" href="#projects">Projects</a>
-        <a class="nav-btn" href="#studies">Studies</a>
+        <a class="nav-btn" href="#projects">{{ $t("nav.project") }}</a>
+        <a class="nav-btn" href="#studies">{{ $t("nav.studies") }}</a>
         <a class="nav-btn" href="#about-me">{{ $t("nav.about") }}</a>
         <li class="lang-btn">
           <v-select

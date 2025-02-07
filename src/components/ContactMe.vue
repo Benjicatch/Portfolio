@@ -2,27 +2,23 @@
 
 <template>
   <div class="contact-me">
-    <h2 class="title">Contact Me</h2>
-    <p>
-      If you have any questions or would like to get in touch, feel free to
-      contact me through the following methods:
-    </p>
+    <h2 class="title">{{ $t("contact.header") }}</h2>
+    <p>{{ $t("contact.description") }}</p>
     <ul>
       <li>
-        Email📧:
-        <a href="mailto:benjamin.colimard@epitech.eu"
-          >benjamin.colimard@epitech.eu</a
-        >
-      </li>
-      <li>Phone☎️: <a href="tel:+33618203071">+33 6 18 20 30 71</a></li>
-      <li>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/benjamin-colimard" target="_blank"
-          >Benjamin Colimard</a
-        >
+        {{ $t("contact.email") }}
+        <a href="mailto:benjamin.colimard@epitech.eu">benjamin.colimard@epitech.eu</a>
       </li>
       <li>
-        GitHub:
+        {{ $t("contact.phone") }}
+        <a href="tel:+33618203071">+33 6 18 20 30 71</a>
+      </li>
+      <li>
+        {{ $t("contact.linkedIn") }}
+        <a href="https://www.linkedin.com/in/benjamin-colimard" target="_blank">Benjamin Colimard</a>
+      </li>
+      <li>
+        {{ $t("contact.github") }}
         <a href="https://github.com/Benjicatch" target="_blank">Benjicatch</a>
       </li>
     </ul>

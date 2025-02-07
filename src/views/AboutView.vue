@@ -8,39 +8,39 @@ import NavBar from "@/components/NavBar.vue";
   <div class="about">
     <section>
       <img src="../assets/me/me.png" alt="Benjamin Colimard" class="rounded-image" />
-      <h1 class="title">👋 Hey, I'm Benjamin Colimard !</h1>
+      <h1 class="title">{{ $t("about.title") }}</h1>
       <p class="align-text">
-        I am French 🇫🇷, born in Bordeaux 🍷, and I am 21 years old.<br />
-        I am currently in my 4th year at Epitech Nantes, a computer science school 🏫.<br />
-        I love programming and I'm always looking for new challenges 🚀.<br />
+        {{ $t("about.description_me[0]") }}<br />
+        {{ $t("about.description_me[1]") }}<br />
+        {{ $t("about.description_me[2]") }}<br />
       </p>
     </section>
     <section>
-      <h2 class="title">🚀 Why I Love Tech</h2>
+      <h2 class="title">{{ $t("about.tech") }}</h2>
       <p class="align-text">
-        For me, programming is like a puzzle, where I have to find the right pieces to make everything work together 🧩.<br />
-        It allows me to build projects that can help people, and I love seeing the impact of my work on others 🌍.<br />
-        For these reasons, I want to work in the tech industry to continue to help people and create amazing things 🌟.<br />
-      </p>
-    </section>
-
-    <section>
-      <h3 class="title">✈️ My Passions and Hobbies</h3>
-      <p class="align-text">
-        I love playing video games 🎮. I play a lot of different games, but my favorite is Hollow Knight 🖤.<br />
-        I am also passionate about sports. I practice baseball ⚾ and a little bit of calisthenics 🏋️.<br />
-        I also love traveling. I have already visited several countries and am always looking for new destinations 🌍.<br />
-        Sometimes, I enjoy exploring new passions like chess or Blender, and see where they take me 🎨.<br />
+        {{ $t("about.description_tech[0]") }}<br />
+        {{ $t("about.description_tech[1]") }}<br />
+        {{ $t("about.description_tech[2]") }}<br />
       </p>
     </section>
 
     <section>
-      <h1 class="title">🎲 Random Facts</h1>
+      <h3 class="title">{{ $t("about.hobbies") }}</h3>
       <p class="align-text">
-        My favorite color is red 🔴, and my favorite number is 🔟.<br />
-        I know how to play mahjong 🀄 and I am a big fan of the game.<br />
-        I love playing laser tag 🔫, I think it's a great way to have fun with friends.<br />
-        I have trouble remembering names, but I never forget a face 🤔.<br />
+        {{ $t("about.description_hobbies[0]") }}<br />
+        {{ $t("about.description_hobbies[1]") }}<br />
+        {{ $t("about.description_hobbies[2]") }}<br />
+        {{ $t("about.description_hobbies[3]") }}<br />
+      </p>
+    </section>
+
+    <section>
+      <h1 class="title">{{ $t("about.randomFacts") }}</h1>
+      <p class="align-text">
+        {{ $t("about.description_randomFacts[0]") }}<br />
+        {{ $t("about.description_randomFacts[1]") }}<br />
+        {{ $t("about.description_randomFacts[2]") }}<br />
+        {{ $t("about.description_randomFacts[3]") }}<br />
       </p>
     </section>
   </div>
