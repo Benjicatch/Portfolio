@@ -1,16 +1,31 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const changeLang = (lang: string) => {
+  localStorage.setItem("lang", lang);
+  window.location.reload();
+};
+const lang = localStorage.getItem("lang") || "ENG";
+
+const items = [ "ENG", "FRA" ];
+</script>
 
 <template>
   <div>
     <nav class="navbar">
       <ul class="nav-list">
-        <a class="nav-btn" href="#">Home</a>
+        <a class="nav-btn" href="#">{{ $t("nav.home") }}</a>
         <a class="nav-btn" href="#projects">Projects</a>
         <a class="nav-btn" href="#studies">Studies</a>
-        <a class="nav-btn" href="#about-me">About Me</a>
+        <a class="nav-btn" href="#about-me">{{ $t("nav.about") }}</a>
+        <li class="lang-btn">
+          <v-select
+            v-model="lang"
+            :items="items"
+            @update:modelValue="changeLang"
+            class="lang-select"
+          />
+        </li>
       </ul>
     </nav>
-    <img class="img" src="../assets/me/profesionnal.jpg" alt="logo" />
   </div>
 </template>
 
@@ -29,17 +44,29 @@ div {
   border-bottom: 1px solid var(--color-border);
 }
 
+.lang-select {
+  font-size: 0.9rem;
+  max-width: auto;
+  max-height: 0px;
+  padding: 0px;
+  margin-top: -30px;
+  background-color: var(--color-background-mute);
+  color: var(--color-heading);
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
 .navbar {
   overflow: hidden;
   flex: 1;
 }
 
 .nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style: none; /* Removes bullet points from all list items */
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  padding: 0;
 }
 
 .nav-btn {
@@ -48,10 +75,24 @@ div {
   text-align: center;
   padding: 1.4rem 0rem;
   text-decoration: none;
-  flex-grow: 1;
+  flex: 200;
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+
+.lang-btn {
+  color: var(--color-heading);
+  text-align: center;
+  margin-left: auto;
+  margin-right: 10px;
+  flex-grow: 0;
+  padding: 1.4rem 0rem;
+  text-decoration: none;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 .nav-btn::before {
@@ -92,4 +133,14 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+
+  /* Adjust language selection button */
+  .lang-btn {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
 </style>
