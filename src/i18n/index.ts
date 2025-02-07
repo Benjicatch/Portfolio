@@ -232,8 +232,8 @@ const messages = {
 };
 
 export default createI18n({
-    locale: localStorage.getItem('lang') || 'ENG', // <--- 1
-    fallbackLocale: 'FRA', // <--- 2
+    locale: localStorage.getItem('lang') || 'FRA', // <--- 1
+    fallbackLocale: 'ENG', // <--- 2
     legacy: false, // <--- 3
     messages, // <--- 4
 });
