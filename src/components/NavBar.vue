@@ -5,7 +5,7 @@ const changeLang = (lang: string) => {
 };
 const lang = localStorage.getItem("lang") || "ENG";
 
-const items = [ "ENG", "FRA" ];
+const items = [ "FRA", "ENG" ];
 </script>
 
 <template>
