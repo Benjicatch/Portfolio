@@ -3,7 +3,7 @@ const changeLang = (lang: string) => {
   localStorage.setItem("lang", lang);
   window.location.reload();
 };
-const lang = localStorage.getItem("lang") || "ENG";
+const lang = localStorage.getItem("lang") || "FRA";
 
 const items = [ "FRA", "ENG" ];
 </script>
