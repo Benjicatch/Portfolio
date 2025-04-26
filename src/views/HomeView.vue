@@ -69,7 +69,7 @@ const skills = [
     </section>
     <section class="projects">
       <h2 class="title">{{ $t("home.projects") }}</h2>
-      <a href="#projects" class="btn">Check out my projects</a>
+      <a href="#projects" class="btn">{{ $t("home.projectsButton") }}</a>
     </section>
   </div>
   <ContactMe />

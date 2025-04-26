@@ -32,7 +32,8 @@ const messages = {
         whyItem1: "Passionate about clean, efficient code.",
         whyItem2: "Strong problem-solving and debugging skills.",
         whyItem3: "Collaborative team player with good communication.",
-        projects: "Want to know more?"
+        projects: "Want to know more?",
+        projectsButton: "See my projects"
       },
       projects: {
         title: "Projects",
@@ -146,7 +147,8 @@ const messages = {
         whyItem1: "Passionné par le code propre et efficace.",
         whyItem2: "Solides compétences en résolution de problèmes et en débogage.",
         whyItem3: "Travailleur d'équipe collaboratif avec une bonne communication.",
-        projects: "Vous voulez en savoir plus ?"
+        projects: "Vous voulez en savoir plus ?",
+        projectsButton: "Voir mes projets"
       },
       projects: {
         title: "Projets",
