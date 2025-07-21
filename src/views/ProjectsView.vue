@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar.vue";
 import dominoImage from "@/assets/projects/domino.jpg";
 import snakeImage from "@/assets/projects/snake.png";
 import rTypeImage from "@/assets/projects/RType.png";
+import Ecommerce from "@/assets/projects/Ecommerce.jpg"
 
 // Accessing translations via useI18n hook
 const { t } = useI18n();
@@ -27,6 +28,12 @@ const projects = [
     description: t("projects.snake.description"),
     image: snakeImage,
     link: "https://github.com/Benjicatch/Snake",
+  },
+  {
+    title: t("projects.Ecommerce.title"),
+    description: t("projects.Ecommerce.description"),
+    image: Ecommerce,
+    link: "https://github.com/Benjicatch/Electronic-commerce-system",
   },
 ];
 </script>

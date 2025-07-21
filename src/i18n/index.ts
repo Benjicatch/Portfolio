@@ -55,6 +55,12 @@ const messages = {
           description:
             "A C++ snake game that can be played on Linux and Windows using the Raylib library. The game features a main menu, a game over, pause, and win screen, and a settings menu. The game allows you to configure the map, the number of obstacles, and the mirror mode.",
           link: "https://github.com/Benjicatch/Snake"
+        },
+        Ecommerce: {
+          title: "Electronic commerce system",
+          description:
+            "University project involving the development of an e-commerce platform that allows users to create and list their own products, as well as browse and purchase items from other users.",
+          link: "https://github.com/Benjicatch/Electronic-commerce-system"
         }
       },
       studies: {
@@ -170,6 +176,12 @@ const messages = {
           description:
             "Un jeu de serpent en C++ jouable sur Linux et Windows à l'aide de la bibliothèque Raylib. Le jeu propose un menu principal, un écran de fin de partie, de pause et de victoire, ainsi qu'un menu de paramètres. Le jeu permet de configurer la carte, le nombre d'obstacles et le mode miroir.",
           link: "https://github.com/Benjicatch/Snake"
+        },
+        Ecommerce: {
+          title: "Electronic commerce system",
+          description:
+            "Projet universitaire impliquant le développement d'une plateforme de commerce électronique qui permet aux utilisateurs de créer et de référencer leurs propres produits, ainsi que de naviguer et d'acheter des articles auprès d'autres utilisateurs.",
+          link: "https://github.com/Benjicatch/Electronic-commerce-system"
         }
       },
       studies: {
