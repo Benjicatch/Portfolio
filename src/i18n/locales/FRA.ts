@@ -15,21 +15,22 @@ export default {
     },
     home: {
         title: "Bienvenue sur mon Portfolio!",
-        subtitle: "Développeur expérimenté {'|'} Backend & Fullstack {'|'} Basé à Nantes",
+        subtitle: "Développeur expérimenté {'|'} Backend/DevOps {'|'} Basé à Nantes",
         whoAmI: {
             title: "Qui suis-je?",
             content: [
             "Je m'appelle <strong>Benjamin Colimard</strong>, développeur passionné et étudiant en 5ᵉ année à <strong>Epitech Nantes</strong>.",
-            "Je suis actuellement en alternance chez Simul'Impact, où je contribue au développement de solutions techniques innovantes.",
+            "Je suis actuellement en stage chez <strong>Groupe SII</strong>, où je contribue à des activités DevOps autour de l'automatisation, de l'intégration continue et de la gestion d'environnements.",
             "Autonome, adaptable et rigoureux, j'ai acquis une solide expertise grâce à mes projets personnels, scolaires et professionnels."
             ]
         },
         skills: "Compétences et outils",
+        skillsDevelopment: "Langages de programmation et frameworks",
+        skillsDevops: "Compétences DevOps",
         whyWorkWithMe: "Pourquoi travailler avec moi?",
-        whyItem1: "Passionné par le code propre et efficace.",
-        whyItem2: "Solides compétences en résolution de problèmes et en débogage.",
-        whyItem3: "Travailleur d'équipe collaboratif avec une bonne communication.",
-        projects: "Vous voulez en savoir plus ?",
+        whyItem1: "Participation à des projets concrets combinant backend, frontend et DevOps.",
+        whyItem2: "Apprend rapidement et s'adapte facilement aux nouvelles technologies pour proposer des solutions concrètes.",
+        whyItem3: "Expérience avec les pipelines CI/CD (Jenkins, Docker) et les workflows d'automatisation.",        projects: "Vous voulez en savoir plus ?",
         projectsButton: "Voir mes projets"
     },
     projects: {
@@ -65,6 +66,14 @@ export default {
             title: "Université Chung Cheng, Taïwan",
             description: "Étudié à l'Université Chung Cheng en tant qu'étudiant d'échange pendant 2 semestres."
         },
+        internship_sii: {
+            title: "Stage chez Groupe SII, Nantes",
+            description: "Stage en DevOps portant sur l'accompagnement de la migration de machines virtuelles de Red Hat Enterprise Linux vers OpenShift."
+        },
+        internship_simul: {
+            title: "Stage chez Simul'Impact, Nantes",
+            description: "En tant que développeur Elixir, j'ai contribué à l'amélioration de l'outil de simulation de l'entreprise, en optimisant à la fois l'expérience utilisateur et les algorithmes sous-jacents."
+        },
         internship_bordeaux: {
             title: "Stage à l'Institut de Technologie, Bordeaux",
             description: "Travaillé en tant que développeur Lisp sur un projet automatisant la création de machines virtuelles pour l'institut."
@@ -91,7 +100,7 @@ export default {
         }
     },
     about: {
-    title: "👋 Hey, je suis Benjamin Colimard !",
+    title: "👋 Salut, je m'appelle Benjamin !",
     description_me: [
         "J'ai 22 ans, je suis Français et je suis né à Bordeaux 🍷.",
         "Je suis actuellement en 5ᵉ année à Epitech Nantes, une école d'informatique 🏫.",

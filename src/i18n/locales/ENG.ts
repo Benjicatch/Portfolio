@@ -15,20 +15,22 @@ export default {
     },
     home: {
         title: "Welcome to my Portfolio!",
-        subtitle: "Experienced Developer {'|'} Backend & Fullstack {'|'} Based in Nantes",
+        subtitle: "Experienced Developer {'|'} Backend/DevOps {'|'} Based in Nantes",
         whoAmI: {
             title: "Who am I?",
             content: [
             "My name is <strong>Benjamin Colimard</strong>, a passionate developer and a 5th-year student at <strong>Epitech Nantes</strong>.",
-            "I am currently completing my work-study program at Simul'Impact, where I contribute to the development of innovative technical solutions.",
+            "I am currently an intern at <strong>Groupe SII</strong>, where I contribute to DevOps activities involving automation, continuous integration, and environment management.",
             "Autonomous, adaptable, and detail-oriented, I have built strong expertise through my personal, academic, and professional projects."
             ]
         },
         skills: "Skills & Tools",
+        skillsDevelopment: "Coding languages and frameworks",
+        skillsDevops: "DevOps Skills",
         whyWorkWithMe: "Why work with me?",
-        whyItem1: "Passionate about clean, efficient code.",
-        whyItem2: "Strong problem-solving and debugging skills.",
-        whyItem3: "Collaborative team player with good communication.",
+        whyItem1: "Worked on real-world projects combining backend, frontend, and DevOps.",
+        whyItem2: "Fast learner who quickly adapts to new technologies and delivers practical solutions.",
+        whyItem3: "Experience with CI/CD pipelines (Jenkins, Docker) and automation workflows.",
         projects: "Want to know more?",
         projectsButton: "See my projects"
     },
@@ -65,13 +67,21 @@ export default {
             title: "Chung Cheng University, Taiwan",
             description: "Studied at Chung Cheng University as an exchange student for 2 semesters."
         },
+        internship_sii: {
+            title: "Internship at Groupe SII, Nantes",
+            description: "DevOps internship focused on supporting the migration of virtual machines from Red Hat Enterprise Linux to OpenShift."
+        },
+        internship_simul: {
+            title: "Internship at Simul'Impact, Nantes",
+            description: "As a Elixir developer, I contributed to the improvement of the company's simulation tool, by optimizing both the user experience and the underlying algorithms."
+        },
         internship_bordeaux: {
             title: "Internship at the Institute of Technology, Bordeaux",
             description: "Worked as a Lisp developer on a project automating the creation of virtual machines for the institute."
         },
         internship_chouic: {
             title: "Internship at Chouic, Nantes",
-            description: "Developed and maintained mobile applications using React Native for the company’s products."
+            description: "Developed and maintained mobile applications using React Native for the company's products."
         },
         epitech: {
             title: "Epitech, Nantes",
@@ -91,7 +101,7 @@ export default {
         }
     },
     about: {
-        title: "👋 Hey, I'm Benjamin Colimard !",
+        title: "👋 Hey, I'm Benjamin !",
         description_me: [
             "I'm a 22-year-old French developer, born in Bordeaux 🍷.",
             "I am currently in my 5th year at Epitech Nantes, a computer science school 🏫.",

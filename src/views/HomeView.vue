@@ -10,18 +10,24 @@ import reactImage from "../assets/skills/React.png";
 import pythonImage from "../assets/skills/Python.png";
 import typescriptImage from "../assets/skills/Typescript.png";
 import vuejsImage from "../assets/skills/Vuejs.png";
+import JenkinsImage from "../assets/skills/Jenkins.png";
+import ansibleImage from "../assets/skills/Ansible.png";
 
 // Skills array
-const skills = [
+const skillsDevelopment = [
   { name: "C", image: cImage, website: "https://en.wikipedia.org/wiki/C_(programming_language)" },
   { name: "C++", image: cppImage, website: "https://en.wikipedia.org/wiki/C%2B%2B" },
   { name: "Typescript", image: typescriptImage, website: "https://www.typescriptlang.org/" },
-  { name: "Docker", image: dockerImage, website: "https://www.docker.com/" },
   { name: "NestJs", image: nestjsImage, website: "https://nestjs.com/" },
   { name: "Python", image: pythonImage, website: "https://www.python.org/" },
   { name: "React", image: reactImage, website: "https://reactjs.org/" },
   { name: "Vuejs", image: vuejsImage, website: "https://vuejs.org/" },
   { name: "Lisp", image: lispImage, website: "https://lisp-lang.org/" },
+];
+const skillsDevops = [
+  { name: "Docker", image: dockerImage, website: "https://www.docker.com/" },
+  { name: "Ansible", image: ansibleImage, website: "https://www.ansible.com/" },
+  { name: "Jenkins", image: JenkinsImage, website: "https://www.jenkins.io/" },
 ];
 </script>
 
@@ -48,8 +54,17 @@ const skills = [
     <section class="me_skills">
       <section class="skills">
         <h2 class="title">{{ $t("home.skills") }}</h2>
+        <h2 class="subtitle" v-html="$t('home.skillsDevelopment')"></h2>
         <div class="skills-grid">
-          <div v-for="skill in skills" :key="skill.name" class="skill-item">
+          <div v-for="skill in skillsDevelopment" :key="skill.name" class="skill-item">
+            <a :href="skill.website" target="_blank" rel="noopener noreferrer">
+              <img :src="skill.image" :alt="skill.name" />
+            </a>
+          </div>
+        </div>
+        <h2 class="subtitle" v-html="$t('home.skillsDevops')"></h2>
+        <div class="skills-grid">
+          <div v-for="skill in skillsDevops" :key="skill.name" class="skill-item">
             <a :href="skill.website" target="_blank" rel="noopener noreferrer">
               <img :src="skill.image" :alt="skill.name" />
             </a>
@@ -125,6 +140,8 @@ const skills = [
   box-shadow: var(--color-background);
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -160,6 +177,8 @@ const skills = [
   gap: 2rem;
   flex-direction: column;
   padding: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .skills-grid {

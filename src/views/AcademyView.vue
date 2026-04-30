@@ -8,6 +8,20 @@ const { t } = useI18n();
 
 const timelineItems = [
   {
+    title: t("studies.internship_sii.title"),
+    description: t("studies.internship_sii.description"),
+    color: "blue",
+    icon: "mdi-briefcase",
+    date: "2026"
+  },
+  {
+    title: t("studies.internship_simul.title"),
+    description: t("studies.internship_simul.description"),
+    color: "blue",
+    icon: "mdi-briefcase",
+    date: "2025-2026"
+  },
+  {
     title: t("studies.taiwan.title"),
     description: t("studies.taiwan.description"),
     color: "blue",
