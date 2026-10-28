@@ -1,91 +1,93 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'; // Import the useI18n hook
-import ContactMe from "@/components/ContactMe.vue";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import NavBar from "@/components/NavBar.vue";
-import dominoImage from "@/assets/projects/domino.jpg";
-import snakeImage from "@/assets/projects/snake.png";
-import rTypeImage from "@/assets/projects/RType.png";
-import Ecommerce from "@/assets/projects/Ecommerce.jpg"
+import ContactMe from "@/components/ContactMe.vue";
+import { projects } from "@/data/cv";
 
-// Accessing translations via useI18n hook
 const { t } = useI18n();
 
-const projects = [
-  {
-    title: t("projects.area.title"),
-    description: t("projects.area.description"),
-    image: dominoImage,
-    link: "https://github.com/AlexGuillard/Area",
-  },
-  {
-    title: t("projects.rType.title"),
-    description: t("projects.rType.description"),
-    image: rTypeImage,
-    link: "https://github.com/AlexGuillard/R-Type",
-  },
-  {
-    title: t("projects.snake.title"),
-    description: t("projects.snake.description"),
-    image: snakeImage,
-    link: "https://github.com/Benjicatch/Snake",
-  },
-  {
-    title: t("projects.Ecommerce.title"),
-    description: t("projects.Ecommerce.description"),
-    image: Ecommerce,
-    link: "https://github.com/Benjicatch/Electronic-commerce-system",
-  },
-];
+const items = computed(() =>
+  projects.map((p) => ({
+    ...p,
+    title: t(`projects.${p.id}.title`),
+    description: t(`projects.${p.id}.description`),
+  })),
+);
 </script>
 
 <template>
   <NavBar />
   <div class="project">
     <section class="welcome">
-      <div class="welcome-body">
-        <div class="container">
-          <h1 class="title">{{ t("projects.title") }}</h1>
-        </div>
+      <div class="welcome-body container">
+        <h1 class="title">{{ t("projects.title") }}</h1>
         <p>{{ t("projects.description") }}</p>
       </div>
     </section>
-    <section v-for="project in projects" :key="project.title" class="projects">
+
+    <section v-for="project in items" :key="project.id" class="projects">
       <img :src="project.image" :alt="project.title" />
-      <div class="project-details" >
+      <div class="project-details">
         <h2 class="title">{{ project.title }}</h2>
+
+        <div class="project-meta">
+          <span><strong>{{ t("projects.labels.year") }}:</strong> {{ project.year }}</span>
+          <span><strong>{{ t("projects.labels.role") }}:</strong> {{ project.role }}</span>
+          <span><strong>{{ t("projects.labels.team") }}:</strong> {{ project.team }}</span>
+        </div>
+
+        <ul class="stack-tags">
+          <li v-for="tech in project.stack" :key="tech">{{ tech }}</li>
+        </ul>
+
         <p>{{ project.description }}</p>
-        <a :href="project.link" class="btn">Learn more</a>
+        <a :href="project.link" class="btn" target="_blank" rel="noopener noreferrer">
+          {{ t("projects.learnMore") }}
+        </a>
       </div>
     </section>
   </div>
   <ContactMe />
 </template>
 
-<style>
+<style scoped>
 .project {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   padding: 2rem;
+}
+
+.welcome,
+.projects {
+  text-align: center;
+  padding: 2rem;
+}
+
+.welcome-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .projects {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
-  padding: 2rem;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .projects p {
   margin-bottom: 1rem;
-  max-width: 70rem; /* Restrict width to force wrapping */
-  word-break: break-word; /* Breaks words when necessary */
-  white-space: pre-line; /* Ensures new lines are preserved while allowing wrapping */
+  max-width: 70rem;
+  word-break: break-word;
+  white-space: pre-line;
 }
 
 .projects img {
@@ -98,16 +100,45 @@ const projects = [
 .project-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  max-width: 40rem;
 }
 
-.project-details h2 {
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
   margin-bottom: 1rem;
+  justify-content: center;
 }
 
-.project-details a {
-  margin-top: 1rem;
+.stack-tags li {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  background: var(--color-background-soft);
+  color: var(--color-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--color-heading);
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -115,6 +146,5 @@ const projects = [
     max-width: 100%;
     max-height: 15rem;
   }
-  
 }
 </style>

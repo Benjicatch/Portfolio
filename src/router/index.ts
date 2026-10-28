@@ -6,7 +6,7 @@ import AcademyView from "@/views/AcademyView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(),
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     // always scroll to top
     return { top: 0 }
   },

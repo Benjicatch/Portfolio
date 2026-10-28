@@ -1,90 +1,109 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import NavBar from "@/components/NavBar.vue";
 import ContactMe from "@/components/ContactMe.vue";
-import cImage from "../assets/skills/C.png";
-import cppImage from "../assets/skills/C++.png";
-import dockerImage from "../assets/skills/Docker.png";
-import lispImage from "../assets/skills/Lisp.png";
-import nestjsImage from "../assets/skills/NestJs.png";
-import reactImage from "../assets/skills/React.png";
-import pythonImage from "../assets/skills/Python.png";
-import typescriptImage from "../assets/skills/Typescript.png";
-import vuejsImage from "../assets/skills/Vuejs.png";
-import JenkinsImage from "../assets/skills/Jenkins.png";
-import ansibleImage from "../assets/skills/Ansible.png";
+import { skills } from "@/data/cv";
 
-// Skills array
-const skillsDevelopment = [
-  { name: "C", image: cImage, website: "https://en.wikipedia.org/wiki/C_(programming_language)" },
-  { name: "C++", image: cppImage, website: "https://en.wikipedia.org/wiki/C%2B%2B" },
-  { name: "Typescript", image: typescriptImage, website: "https://www.typescriptlang.org/" },
-  { name: "NestJs", image: nestjsImage, website: "https://nestjs.com/" },
-  { name: "Python", image: pythonImage, website: "https://www.python.org/" },
-  { name: "React", image: reactImage, website: "https://reactjs.org/" },
-  { name: "Vuejs", image: vuejsImage, website: "https://vuejs.org/" },
-  { name: "Lisp", image: lispImage, website: "https://lisp-lang.org/" },
-];
-const skillsDevops = [
-  { name: "Docker", image: dockerImage, website: "https://www.docker.com/" },
-  { name: "Ansible", image: ansibleImage, website: "https://www.ansible.com/" },
-  { name: "Jenkins", image: JenkinsImage, website: "https://www.jenkins.io/" },
-];
+const { tm, rt } = useI18n();
+
+const developmentSkills = computed(() => skills.filter((s) => s.category === "development"));
+const devopsSkills = computed(() => skills.filter((s) => s.category === "devops"));
+const toolSkills = computed(() => skills.filter((s) => s.category === "tools"));
+
+const whyItems = computed<string[]>(() => {
+  const raw = tm("home.whyItems");
+  return Array.isArray(raw) ? raw.map((item) => rt(item as string)) : [];
+});
+
+const cvUrl = "/Portfolio/cv/benjamin-colimard-cv.pdf";
 </script>
 
 <template>
   <NavBar />
   <div class="home">
     <section class="welcome">
-      <div class="welcome-body">
-        <div class="container">
-          <img class="me" src="../assets/me/profesionnal.jpg" alt="me" />
-          <h1 class="title">{{ $t("home.title") }}</h1>
-          <h2 class="subtitle" v-html="$t('home.subtitle')"></h2>
-        </div>
+      <div class="welcome-body container">
+        <img class="me" src="@/assets/me/professional.jpg" alt="Benjamin Colimard" />
+        <h1 class="title">{{ $t("home.title") }}</h1>
+        <h2 class="subtitle" v-html="$t('home.subtitle')"></h2>
+        <a :href="cvUrl" class="btn" download="Benjamin-Colimard-CV.pdf">
+          {{ $t("home.downloadCV") }}
+        </a>
       </div>
     </section>
 
     <section>
       <h2 class="title">{{ $t("home.whoAmI.title") }}</h2>
-        <p class="align-text" v-html="$t('home.whoAmI.content[0]')"></p>
-        <p class="align-text" v-html="$t('home.whoAmI.content[1]')"></p>
-        <p class="align-text" v-html="$t('home.whoAmI.content[2]')"></p>
+      <p
+        v-for="(paragraph, i) in $tm('home.whoAmI.content')"
+        :key="i"
+        class="align-text"
+        v-html="paragraph"
+      ></p>
     </section>
 
     <section class="me_skills">
       <section class="skills">
         <h2 class="title">{{ $t("home.skills") }}</h2>
-        <h2 class="subtitle" v-html="$t('home.skillsDevelopment')"></h2>
+
+        <h3 class="subtitle">{{ $t("home.skillsDevelopment") }}</h3>
         <div class="skills-grid">
-          <div v-for="skill in skillsDevelopment" :key="skill.name" class="skill-item">
-            <a :href="skill.website" target="_blank" rel="noopener noreferrer">
-              <img :src="skill.image" :alt="skill.name" />
-            </a>
-          </div>
+          <a
+            v-for="skill in developmentSkills"
+            :key="skill.name"
+            :href="skill.website"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="skill-item"
+            :title="skill.name"
+          >
+            <img :src="skill.image" :alt="skill.name" />
+          </a>
         </div>
-        <h2 class="subtitle" v-html="$t('home.skillsDevops')"></h2>
+
+        <h3 class="subtitle">{{ $t("home.skillsDevops") }}</h3>
         <div class="skills-grid">
-          <div v-for="skill in skillsDevops" :key="skill.name" class="skill-item">
-            <a :href="skill.website" target="_blank" rel="noopener noreferrer">
-              <img :src="skill.image" :alt="skill.name" />
-            </a>
-          </div>
+          <a
+            v-for="skill in devopsSkills"
+            :key="skill.name"
+            :href="skill.website"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="skill-item"
+            :title="skill.name"
+          >
+            <img :src="skill.image" :alt="skill.name" />
+          </a>
+        </div>
+
+        <h3 class="subtitle">{{ $t("home.skillsTools") }}</h3>
+        <div class="skills-grid">
+          <a
+            v-for="skill in toolSkills"
+            :key="skill.name"
+            :href="skill.website"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="skill-item"
+            :title="skill.name"
+          >
+            <img :src="skill.image" :alt="skill.name" />
+          </a>
         </div>
       </section>
+
       <section class="why-work-with-me">
         <h2 class="title">{{ $t("home.whyWorkWithMe") }}</h2>
-        <div class="why-item-list">
-          <ul>
-            <li>{{ $t("home.whyItem1") }}</li>
-            <li>{{ $t("home.whyItem2") }}</li>
-            <li>{{ $t("home.whyItem3") }}</li>
-          </ul>
-        </div>
+        <ul class="why-item-list">
+          <li v-for="(item, i) in whyItems" :key="i">{{ item }}</li>
+        </ul>
       </section>
     </section>
+
     <section class="projects">
       <h2 class="title">{{ $t("home.projects") }}</h2>
-      <a href="#projects" class="btn">{{ $t("home.projectsButton") }}</a>
+      <RouterLink to="/projects" class="btn">{{ $t("home.projectsButton") }}</RouterLink>
     </section>
   </div>
   <ContactMe />
@@ -214,7 +233,7 @@ const skillsDevops = [
 .why-item-list {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 2.5rem;
   align-items: center;
   justify-content: center;
 }
