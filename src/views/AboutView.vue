@@ -7,7 +7,11 @@ import NavBar from "@/components/NavBar.vue";
   <NavBar />
   <div class="about">
     <section>
-      <img src="../assets/me/me.jpg" alt="Benjamin Colimard" class="rounded-image" />
+      <img
+        src="../assets/me/me.jpg"
+        alt="Benjamin Colimard"
+        class="rounded-image"
+      />
       <h1 class="title">{{ $t("about.title") }}</h1>
       <p class="align-text">
         {{ $t("about.description_me[0]") }}<br />
@@ -92,5 +96,4 @@ import NavBar from "@/components/NavBar.vue";
   word-break: break-word; /* Breaks words when necessary */
   white-space: pre-line; /* Ensures new lines are preserved while allowing wrapping */
 }
-
 </style>

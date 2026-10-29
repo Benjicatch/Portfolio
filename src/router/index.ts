@@ -8,7 +8,7 @@ const router = createRouter({
   history: createWebHashHistory(),
   scrollBehavior() {
     // always scroll to top
-    return { top: 0 }
+    return { top: 0 };
   },
   routes: [
     { path: "/", name: "home", component: HomeView },

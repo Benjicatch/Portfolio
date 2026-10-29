@@ -7,13 +7,18 @@ import { skills } from "@/data/cv";
 
 const { tm, rt } = useI18n();
 
-const developmentSkills = computed(() => skills.filter((s) => s.category === "development"));
-const devopsSkills = computed(() => skills.filter((s) => s.category === "devops"));
+const developmentSkills = computed(() =>
+  skills.filter((s) => s.category === "development"),
+);
+const devopsSkills = computed(() =>
+  skills.filter((s) => s.category === "devops"),
+);
 const toolSkills = computed(() => skills.filter((s) => s.category === "tools"));
 
 const whyItems = computed<string[]>(() => {
-  const raw = tm("home.whyItems");
-  return Array.isArray(raw) ? raw.map((item) => rt(item as string)) : [];
+  const raw = tm("home.whyItems") as unknown;
+  if (!Array.isArray(raw)) return [];
+  return (raw as unknown[]).map((item) => rt(item as string) as string);
 });
 
 const cvUrl = "/Portfolio/cv/benjamin-colimard-cv.pdf";
@@ -24,7 +29,11 @@ const cvUrl = "/Portfolio/cv/benjamin-colimard-cv.pdf";
   <div class="home">
     <section class="welcome">
       <div class="welcome-body container">
-        <img class="me" src="@/assets/me/professional.jpg" alt="Benjamin Colimard" />
+        <img
+          class="me"
+          src="@/assets/me/professional.jpg"
+          alt="Benjamin Colimard"
+        />
         <h1 class="title">{{ $t("home.title") }}</h1>
         <h2 class="subtitle" v-html="$t('home.subtitle')"></h2>
         <a :href="cvUrl" class="btn" download="Benjamin-Colimard-CV.pdf">
@@ -103,7 +112,9 @@ const cvUrl = "/Portfolio/cv/benjamin-colimard-cv.pdf";
 
     <section class="projects">
       <h2 class="title">{{ $t("home.projects") }}</h2>
-      <RouterLink to="/projects" class="btn">{{ $t("home.projectsButton") }}</RouterLink>
+      <RouterLink to="/projects" class="btn">{{
+        $t("home.projectsButton")
+      }}</RouterLink>
     </section>
   </div>
   <ContactMe />
@@ -300,7 +311,7 @@ const cvUrl = "/Portfolio/cv/benjamin-colimard-cv.pdf";
   section {
     margin: 0%;
   }
-  
+
   .why-item-list li {
     font-size: 1rem;
   }

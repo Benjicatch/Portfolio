@@ -5,7 +5,7 @@ const changeLang = (lang: string) => {
 };
 const lang = localStorage.getItem("lang") || "FRA";
 
-const items = [ "FRA", "ENG" ];
+const items = ["FRA", "ENG"];
 </script>
 
 <template>
@@ -135,12 +135,10 @@ a {
 }
 
 @media (max-width: 768px) {
-
   /* Adjust language selection button */
   .lang-btn {
     margin-right: 0;
     margin-left: 0;
   }
 }
-
 </style>

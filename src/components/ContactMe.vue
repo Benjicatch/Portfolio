@@ -7,7 +7,9 @@
     <ul>
       <li>
         {{ $t("contact.email") }}
-        <a href="mailto:benjamin.colimard@epitech.eu">benjamin.colimard@epitech.eu</a>
+        <a href="mailto:benjamin.colimard@epitech.eu"
+          >benjamin.colimard@epitech.eu</a
+        >
       </li>
       <li>
         {{ $t("contact.phone") }}
@@ -15,7 +17,9 @@
       </li>
       <li>
         {{ $t("contact.linkedIn") }}
-        <a href="https://www.linkedin.com/in/benjamin-colimard" target="_blank">Benjamin Colimard</a>
+        <a href="https://www.linkedin.com/in/benjamin-colimard" target="_blank"
+          >Benjamin Colimard</a
+        >
       </li>
       <li>
         {{ $t("contact.github") }}

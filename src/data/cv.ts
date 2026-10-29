@@ -48,23 +48,99 @@ import gitImage from "@/assets/skills/Git.png"; // add this asset
 
 export const skills: Skill[] = [
   // Development
-  { name: "C", image: cImage, website: "https://en.wikipedia.org/wiki/C_(programming_language)", category: "development" },
-  { name: "C++", image: cppImage, website: "https://en.wikipedia.org/wiki/C%2B%2B", category: "development" },
-  { name: "TypeScript", image: typescriptImage, website: "https://www.typescriptlang.org/", category: "development" },
-  { name: "Python", image: pythonImage, website: "https://www.python.org/", category: "development" },
-  { name: "NestJS", image: nestjsImage, website: "https://nestjs.com/", category: "development" },
-  { name: "React", image: reactImage, website: "https://reactjs.org/", category: "development" },
-  { name: "React Native", image: reactImage, website: "https://reactnative.dev/", category: "development" },
-  { name: "Vue.js", image: vuejsImage, website: "https://vuejs.org/", category: "development" },
-  { name: "Lisp", image: lispImage, website: "https://lisp-lang.org/", category: "development" },
+  {
+    name: "C",
+    image: cImage,
+    website: "https://en.wikipedia.org/wiki/C_(programming_language)",
+    category: "development",
+  },
+  {
+    name: "C++",
+    image: cppImage,
+    website: "https://en.wikipedia.org/wiki/C%2B%2B",
+    category: "development",
+  },
+  {
+    name: "TypeScript",
+    image: typescriptImage,
+    website: "https://www.typescriptlang.org/",
+    category: "development",
+  },
+  {
+    name: "Python",
+    image: pythonImage,
+    website: "https://www.python.org/",
+    category: "development",
+  },
+  {
+    name: "NestJS",
+    image: nestjsImage,
+    website: "https://nestjs.com/",
+    category: "development",
+  },
+  {
+    name: "React",
+    image: reactImage,
+    website: "https://reactjs.org/",
+    category: "development",
+  },
+  {
+    name: "React Native",
+    image: reactImage,
+    website: "https://reactnative.dev/",
+    category: "development",
+  },
+  {
+    name: "Vue.js",
+    image: vuejsImage,
+    website: "https://vuejs.org/",
+    category: "development",
+  },
+  {
+    name: "Lisp",
+    image: lispImage,
+    website: "https://lisp-lang.org/",
+    category: "development",
+  },
   // DevOps
-  { name: "Docker", image: dockerImage, website: "https://www.docker.com/", category: "devops" },
-  { name: "Ansible", image: ansibleImage, website: "https://www.ansible.com/", category: "devops" },
-  { name: "Jenkins", image: jenkinsImage, website: "https://www.jenkins.io/", category: "devops" },
-  { name: "RHEL", image: rhelImage, website: "https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux", category: "devops" },
+  {
+    name: "Docker",
+    image: dockerImage,
+    website: "https://www.docker.com/",
+    category: "devops",
+  },
+  {
+    name: "Ansible",
+    image: ansibleImage,
+    website: "https://www.ansible.com/",
+    category: "devops",
+  },
+  {
+    name: "Jenkins",
+    image: jenkinsImage,
+    website: "https://www.jenkins.io/",
+    category: "devops",
+  },
+  {
+    name: "RHEL",
+    image: rhelImage,
+    website:
+      "https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux",
+    category: "devops",
+  },
   // Tools
-  { name: "PostgreSQL", image: postgresImage, website: "https://www.postgresql.org/", category: "tools" },
-  { name: "Git", image: gitImage, website: "https://git-scm.com/", category: "tools" },
+  {
+    name: "PostgreSQL",
+    image: postgresImage,
+    website: "https://www.postgresql.org/",
+    category: "tools",
+  },
+  {
+    name: "Git",
+    image: gitImage,
+    website: "https://git-scm.com/",
+    category: "tools",
+  },
 ];
 
 // --- Projects -------------------------------------------------------------
@@ -115,13 +191,67 @@ export const projects: Project[] = [
 // --- Timeline -------------------------------------------------------------
 // Dates live here ONLY. Update once, everything follows.
 export const timeline: TimelineEntry[] = [
-  { id: "internship_sii",          date: "2026 (6 months)", color: "blue",   icon: "mdi-briefcase", kind: "work"  },
-  { id: "internship_simul",        date: "2025 – 2026 (6 months)",    color: "blue",   icon: "mdi-briefcase", kind: "work"  },
-  { id: "taiwan",                  date: "2024 – 2025",    color: "blue",   icon: "mdi-school",    kind: "study" },
-  { id: "internship_bordeaux",     date: "2024",           color: "blue",   icon: "mdi-briefcase", kind: "work"  },
-  { id: "internship_chouic",       date: "2022",           color: "green",  icon: "mdi-web",       kind: "work"  },
-  { id: "epitech",                 date: "2021 – 2026", color: "purple", icon: "mdi-school",    kind: "study" },
-  { id: "highschool_saint_dominique", date: "2020 – 2021", color: "purple", icon: "mdi-school",    kind: "study" },
-  { id: "highschool_alfred_kastler",  date: "2018 – 2020", color: "purple", icon: "mdi-school",    kind: "study" },
-  { id: "college_victor_louis",    date: "2017 – 2018",    color: "red",    icon: "mdi-laptop",    kind: "study" },
+  {
+    id: "internship_sii",
+    date: "2026 (6 months)",
+    color: "blue",
+    icon: "mdi-briefcase",
+    kind: "work",
+  },
+  {
+    id: "internship_simul",
+    date: "2025 – 2026 (6 months)",
+    color: "blue",
+    icon: "mdi-briefcase",
+    kind: "work",
+  },
+  {
+    id: "taiwan",
+    date: "2024 – 2025",
+    color: "blue",
+    icon: "mdi-school",
+    kind: "study",
+  },
+  {
+    id: "internship_bordeaux",
+    date: "2024",
+    color: "blue",
+    icon: "mdi-briefcase",
+    kind: "work",
+  },
+  {
+    id: "internship_chouic",
+    date: "2022",
+    color: "green",
+    icon: "mdi-web",
+    kind: "work",
+  },
+  {
+    id: "epitech",
+    date: "2021 – 2026",
+    color: "purple",
+    icon: "mdi-school",
+    kind: "study",
+  },
+  {
+    id: "highschool_saint_dominique",
+    date: "2020 – 2021",
+    color: "purple",
+    icon: "mdi-school",
+    kind: "study",
+  },
+  {
+    id: "highschool_alfred_kastler",
+    date: "2018 – 2020",
+    color: "purple",
+    icon: "mdi-school",
+    kind: "study",
+  },
+  {
+    id: "college_victor_louis",
+    date: "2017 – 2018",
+    color: "red",
+    icon: "mdi-laptop",
+    kind: "study",
+  },
 ];

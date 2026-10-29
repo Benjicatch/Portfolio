@@ -32,9 +32,18 @@ const items = computed(() =>
         <h2 class="title">{{ project.title }}</h2>
 
         <div class="project-meta">
-          <span><strong>{{ t("projects.labels.year") }}:</strong> {{ project.year }}</span>
-          <span><strong>{{ t("projects.labels.role") }}:</strong> {{ project.role }}</span>
-          <span><strong>{{ t("projects.labels.team") }}:</strong> {{ project.team }}</span>
+          <span
+            ><strong>{{ t("projects.labels.year") }}:</strong>
+            {{ project.year }}</span
+          >
+          <span
+            ><strong>{{ t("projects.labels.role") }}:</strong>
+            {{ project.role }}</span
+          >
+          <span
+            ><strong>{{ t("projects.labels.team") }}:</strong>
+            {{ project.team }}</span
+          >
         </div>
 
         <ul class="stack-tags">
@@ -42,7 +51,12 @@ const items = computed(() =>
         </ul>
 
         <p>{{ project.description }}</p>
-        <a :href="project.link" class="btn" target="_blank" rel="noopener noreferrer">
+        <a
+          :href="project.link"
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {{ t("projects.learnMore") }}
         </a>
       </div>

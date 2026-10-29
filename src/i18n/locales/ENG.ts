@@ -8,7 +8,8 @@ export default {
   },
   contact: {
     header: "Contact Me",
-    description: "If you have any questions or would like to get in touch, feel free to contact me through the following methods:",
+    description:
+      "If you have any questions or would like to get in touch, feel free to contact me through the following methods:",
     email: "Email📧:",
     phone: "Phone☎️:",
     linkedIn: "LinkedIn:",
@@ -54,59 +55,67 @@ export default {
       title: "Area",
       description:
         "A web & mobile application letting users connect their social networks via OAuth2 and automate actions between them (e.g. post a picture on Instagram → an email is sent to friends). Built as a microservices architecture: React front-end, React Native mobile app, NestJS back-end, PostgreSQL database.",
-        link: "https://github.com/AlexGuillard/Area",
+      link: "https://github.com/AlexGuillard/Area",
     },
     rType: {
       title: "R-Type",
       description:
         "A C++ multiplayer game inspired by R-Type. Multiple levels with distinct enemies and bosses, playable across machines with three modes: multi, PvP, and multi friendly-fire. Built with the Raylib library.",
-        link: "https://github.com/AlexGuillard/R-Type",
+      link: "https://github.com/AlexGuillard/R-Type",
     },
     snake: {
       title: "Snake",
       description:
         "A cross-platform C++ snake game (Linux & Windows) using Raylib. Features a main menu, pause, game-over and win screens, a settings menu, and configurable map, obstacle count, and mirror mode.",
-        link: "https://github.com/Benjicatch/Snake",
+      link: "https://github.com/Benjicatch/Snake",
     },
     Ecommerce: {
       title: "Electronic commerce system",
       description:
         "University project: an e-commerce platform allowing users to create and list their own products, browse and purchase items from other users.",
-        link: "https://github.com/Benjicatch/Electronic-commerce-system",
+      link: "https://github.com/Benjicatch/Electronic-commerce-system",
     },
   },
   studies: {
     taiwan: {
       title: "Chung Cheng University, Taiwan",
-      description: "Exchange student for 2 semesters — international coursework in computer science.",
+      description:
+        "Exchange student for 2 semesters — international coursework in computer science.",
     },
     internship_sii: {
-    title: "DevOps Developer — Groupe SII, Nantes",
-    description: "Built an automated platform to validate VM readiness before production, automated zero-downtime upgrades of Squash and Nexus, and worked with Jenkins, Ansible, and GitLab.",
+      title: "DevOps Developer — Groupe SII, Nantes",
+      description:
+        "Built an automated platform to validate VM readiness before production, automated zero-downtime upgrades of Squash and Nexus, and worked with Jenkins, Ansible, and GitLab.",
     },
     internship_simul: {
       title: "Elixir Developer — Simul'Impact, Nantes",
-      description: "Contributed to the company's simulation tool, optimizing both the user experience and the underlying algorithms in Elixir.",
+      description:
+        "Contributed to the company's simulation tool, optimizing both the user experience and the underlying algorithms in Elixir.",
     },
     internship_bordeaux: {
       title: "Lisp Developer — Institute of Technology, Bordeaux",
-      description: "Automated the creation of virtual machines for the institute using Lisp.",
+      description:
+        "Automated the creation of virtual machines for the institute using Lisp.",
     },
     internship_chouic: {
       title: "Mobile Developer — Chouic, Nantes",
-      description: "Developed and maintained mobile applications using React Native for the company's products.",
+      description:
+        "Developed and maintained mobile applications using React Native for the company's products.",
     },
     epitech: {
       title: "Epitech, Nantes",
-      description: "Engineering degree in software development — 5th year, graduating 2026.",
+      description:
+        "Engineering degree in software development — 5th year, graduating 2026.",
     },
     highschool_saint_dominique: {
       title: "High School Saint Dominique, Nantes",
-      description: "Graduated with honors. Specialized in programming and mathematics.",
+      description:
+        "Graduated with honors. Specialized in programming and mathematics.",
     },
     highschool_alfred_kastler: {
       title: "High School Alfred Kastler, Talence",
-      description: "Baseball sports studies alongside introductory programming. Focus: programming, physics-chemistry, mathematics.",
+      description:
+        "Baseball sports studies alongside introductory programming. Focus: programming, physics-chemistry, mathematics.",
     },
     college_victor_louis: {
       title: "College Victor Louis, Talence",
